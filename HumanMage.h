@@ -5,7 +5,7 @@
 
 class HumanMage : public Human, public Mage {
 public:
-    explicit HumanMage(const string &name) : Human(name), Mage() {}
+    HumanMage(const string &name) : Human(name), Mage() {}
 
     int getHealth() const override {
         int total_health = health + heath_rate;

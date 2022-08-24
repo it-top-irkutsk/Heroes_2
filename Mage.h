@@ -4,8 +4,8 @@
 
 class Mage : public Specialization {
 private:
-    const int HEALTH_RATE = 15;
-    const int DAMAGE_RATE = 0;
+    static const int HEALTH_RATE = 15;
+    static const int DAMAGE_RATE = 5;
 protected:
     Mage() : Specialization(HEALTH_RATE, DAMAGE_RATE) {}
 };
