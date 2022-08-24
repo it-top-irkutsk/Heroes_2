@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "CLI.h"
+
 #include "HumanMage.h"
 
 using namespace std;
@@ -8,12 +10,13 @@ int main() {
     Hero* player = new HumanMage("A");
     Hero* enemy = new HumanMage("B");
 
-    cout << player->getName() << ": " << player->getHealth() << " | " << player->getDamage() << endl;
-    cout << enemy->getName() << ": " << enemy->getHealth() << " | " << enemy->getDamage() << endl;
+    CLI::ShowHeroInfo(player);
+
+    CLI::ShowHeroInfo(enemy);
 
     player->Attack(enemy);
-    cout << enemy->getName() << ": " << enemy->getHealth() << " | " << enemy->getDamage() << endl;
+    CLI::ShowHero(enemy); cout << endl;
 
     enemy->Attack(player);
-    cout << player->getName() << ": " << player->getHealth() << " | " << player->getDamage() << endl;
+    CLI::ShowHero(player); cout << endl;
 }

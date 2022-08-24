@@ -9,4 +9,3 @@ private:
 protected:
     Mage() : Specialization(HEALTH_RATE, DAMAGE_RATE) {}
 };
-
