@@ -1,6 +1,19 @@
 #include <iostream>
 
+#include "HumanMage.h"
+
+using namespace std;
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Hero* player = new HumanMage("A");
+    Hero* enemy = new HumanMage("B");
+
+    cout << player->getName() << ": " << player->getHealth() << " | " << player->getDamage() << endl;
+    cout << enemy->getName() << ": " << enemy->getHealth() << " | " << enemy->getDamage() << endl;
+
+    player->Attack(enemy);
+    cout << enemy->getName() << ": " << enemy->getHealth() << " | " << enemy->getDamage() << endl;
+
+    enemy->Attack(player);
+    cout << player->getName() << ": " << player->getHealth() << " | " << player->getDamage() << endl;
 }
